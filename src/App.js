@@ -1,11 +1,33 @@
-import { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+import AppBar from './components/AppBar';
+
+import Spinner from './components/Spinner';
+
+import routes from './routes';
 
 import './App.css';
+
+const HomePage = lazy(() => import('./views/HomePage'));
+const MoviesPage = lazy(() => import('./views/MoviesPage'));
 
 class App extends Component {
   state = {};
   render() {
-    return <></>;
+    return (
+      <>
+        <AppBar />
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route exact path={routes.home} component={HomePage} />
+            <Route path={routes.moviesInfo} />
+            <Route path={routes.movies} component={MoviesPage} />
+            <Redirect to={routes.home} />
+          </Switch>
+        </Suspense>
+      </>
+    );
   }
 }
 
