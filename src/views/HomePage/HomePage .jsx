@@ -3,6 +3,8 @@ import { getTrending } from '../../services/moviesApi';
 
 import MoviesList from '../../components/MoviesList';
 
+import styles from './HomePage.module.css';
+
 class HomePage extends Component {
   state = { movies: null };
 
@@ -15,7 +17,7 @@ class HomePage extends Component {
     const { movies } = this.state;
     return (
       <>
-        <h1>Trending Movies:</h1>
+        <h1 className={styles.title}>Trending Movies: </h1>
 
         {movies && (
           <MoviesList movies={movies} location={this.props.location} />

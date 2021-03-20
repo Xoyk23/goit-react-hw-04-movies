@@ -1,0 +1,11 @@
+.list {
+  list-style: none;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: #6654d9;
+}

@@ -1,0 +1,42 @@
+.container {
+  padding: 20px 25px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input {
+  width: 100%;
+  margin-right: 12px;
+  padding: 10px;
+  outline: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+.button {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px 30px;
+  border-radius: 12px;
+  border: none;
+
+  background-color: #e3e3e8;
+  color: #000;
+
+  line-height: 1;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+  color: #fff;
+}

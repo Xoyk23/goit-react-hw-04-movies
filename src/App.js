@@ -8,9 +8,11 @@ import Spinner from './components/Spinner';
 import routes from './routes';
 
 import './App.css';
+// import MoviesInfo from './views/MoviesInfo/MoviesInfo';
 
 const HomePage = lazy(() => import('./views/HomePage'));
 const MoviesPage = lazy(() => import('./views/MoviesPage'));
+const MovieDetailsPage = lazy(() => import('./views/MovieDetailsPage'));
 
 class App extends Component {
   state = {};
@@ -21,7 +23,10 @@ class App extends Component {
         <Suspense fallback={<Spinner />}>
           <Switch>
             <Route exact path={routes.home} component={HomePage} />
-            <Route path={routes.moviesInfo} />
+            <Route
+              path={routes.movieDetailsPage}
+              component={MovieDetailsPage}
+            />
             <Route path={routes.movies} component={MoviesPage} />
             <Redirect to={routes.home} />
           </Switch>

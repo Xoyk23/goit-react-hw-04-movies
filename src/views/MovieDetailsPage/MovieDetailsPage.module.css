@@ -1,0 +1,23 @@
+.card {
+  padding: 5px;
+}
+
+.goBackBtn {
+  margin-bottom: 5px;
+}
+
+.info {
+  list-style: none;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.link:hover {
+  color: #6654d9;
+}
+
+.active {
+  color: #6654d9;
+}

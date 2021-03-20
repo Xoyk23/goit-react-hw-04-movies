@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
+import styles from './MoviesList.module.css';
+
 import routes from '../../routes';
 
 const MoviesList = ({ movies, location }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       {movies.map(movie => (
         <li key={movie.id}>
           <NavLink
+            className={styles.link}
             to={{
-              pathname: `${routes.moviesg}/${movie.id}`,
+              pathname: `${routes.movies}/${movie.id}`,
               state: { from: location },
             }}
           >
